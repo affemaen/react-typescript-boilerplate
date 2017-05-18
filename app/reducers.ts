@@ -10,6 +10,7 @@ import Redux from 'redux';
 
 import globalReducer from 'app/containers/App/reducer';
 import languageProviderReducer from 'app/containers/LanguageProvider/reducer';
+import {reducer as form} from 'redux-form/immutable';
 
 /*
  * routeReducer
@@ -52,6 +53,7 @@ export default function createReducer(asyncReducers: Redux.ReducersMapObject = {
     route: routeReducer,
     global: globalReducer,
     language: languageProviderReducer,
+    form,
     ...asyncReducers,
   };
 
